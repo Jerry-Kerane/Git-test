@@ -33,6 +33,22 @@ console.log(` Cart quantity: ${Quandtity}`)
 "
 
 >+3</Button>
+
+<button 
+onclick="
+Quandtity += 4;
+console.log(` Cart quantity: ${Quandtity}`)
+"
+
+>+4</button>
+<button
+onclick="
+Quandtity += 5;
+console.log(` Cart quantity: ${Quandtity}`)
+"
+>+5</button>
+
+
 <Button onclick="
 
 Quandtity = 0;
@@ -40,6 +56,26 @@ console.log('Cart was reset');
 console.log(` Cart quantity: ${Quandtity}`);
 
 ">Reset cart</Button>
+<button
+onclick="
+
+Quandtity --;
+console.log(` Cart quantity: ${Quandtity}`)"
+
+>Remove From cart</button>
+
+<button onclick="
+Quandtity -=2;
+console.log(` Cart quantity: ${Quandtity}`)
+
+
+">-2</button>
+<button
+onclick="Quandtity -=3;
+console.log(` Cart quantity: ${Quandtity}`)"
+
+
+>-3</button>
         
        <script>
 let Quandtity = 0;
