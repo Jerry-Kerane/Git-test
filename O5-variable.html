@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="05-variable.css">
+    </head>
+    
+    <body> 
+        <p>Cart Quantity</p> 
+<Button 
+onclick="
+console.log(` Cart quantity: ${Quandtity}`)
+
+"
+>Show Quantity</Button>
+<Button 
+onclick="
+Quandtity = Quandtity + 1;
+console.log(` Cart quantity: ${Quandtity}`)
+
+"
+
+>Add To cart</Button>
+<Button onclick="
+Quandtity = Quandtity + 2;
+console.log(` Cart quantity: ${Quandtity}`)
+
+">+2</Button>
+<Button 
+onclick="
+Quandtity = Quandtity + 3;
+console.log(` Cart quantity: ${Quandtity}`)
+
+"
+
+>+3</Button>
+<Button onclick="
+
+Quandtity = 0;
+console.log('Cart was reset');
+console.log(` Cart quantity: ${Quandtity}`);
+
+">Reset cart</Button>
+        
+       <script>
+let Quandtity = 0;
+
+
+       </script>
+    </body>
+</html>
+<!--BIEN MEs IMPRESSION APRES AVOIR SUVIS CELA 
+Deja note toujours que le javascript est case sensitive so you can't really play with your code or you may get stuck at a point
+seconde most of the code is done in the script firts and then inline using (onclick)
+always work with interpollation 
+-->
+
+
