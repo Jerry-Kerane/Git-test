@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+<body>
+    <script>
+        const randomflip = Math.random();
+        let result;
+        
+ if (randomflip < 0.5)
+ {
+    result='Piece';
+ }
+ else{
+    result='coin';
+ }
+    console.log(result);
+    
+    const guess = 'Piece'||'coin';
+    if( guess=== result){
+        console.log('You win');
+    }
+    else{
+        console.log("You lose");
+    }
+    </script>
+</body>
+    </html>

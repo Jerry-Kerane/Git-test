@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>Rock paper scissors</title>
+</head>
+<body>
+    <p>Rock paper scissors</p>
+    <button
+    onclick="
+    
+    const randomnumber = Math.random( );            /* First step is to generate a random number using Math.random() commande which  generate random number from 0-1 */ /*What i did was assigning a range of value to each entity i.e rock ranges from 0 - 0.2, paper from 0.3 - 0.5 and scissors 0.6- 1*/
+    let Computermove =''; /* here i assigne en empty string to the variable Computermove to let it chose base on it randome option*/
+    
+    if (randomnumber >= 0 && randomnumber < 0.3){
+        Computermove = 'rock';
+    }
+    else if (randomnumber >= 0.3 && randomnumber <  0.6){
+        Computermove = 'Paper';
+    }
+    else if (randomnumber >= 0.6 && randomnumber < 1)
+    {
+        Computermove = 'Scissors';
+    }/*From line 15 to 24 i compare different numbers with specific range and give them the computermove to show at the end */
+    console.log(Computermove); /*Here i tell the console to display the computer move on the console*/
+
+
+    let result='';
+    if (Computermove === 'rock')
+    {
+        result ='Tie game';
+    }
+
+    else if (Computermove === 'Paper'){
+        result = 'You lose';
+    }
+    else if (Computermove=== 'Scissors')
+    {
+        result ='You Win';
+    } /*Here the result variable is also assigne an empty string to display a result depending on what you chose for the 3 different statement*/
+alert(`You Picked rock, Computer picked ${Computermove}. humm ${result}`)/*Alert just display the result on the screen with a pop up NB: WE USE TEMPLATE STRING(``) to give specific order in the line  that's why we have ${} to display computermove and result*/
+
+
+    ">Rock</button>
+    <button
+    onclick="
+    
+    
+    
+        const randomnumber = Math.random( );
+    let Computermove ='';
+    
+    if (randomnumber >= 0 && randomnumber < 0.3){
+        Computermove = 'rock';
+    }
+    else if (randomnumber >= 0.3 && randomnumber <  0.6){
+        Computermove = 'Paper';
+    }
+    else if (randomnumber >= 0.6 && randomnumber < 1)
+    {
+        Computermove = 'Scissors';
+    }
+    console.log(Computermove);
+
+
+    let result='';
+    if (Computermove === 'rock')
+    {
+        result ='You win';
+    }
+
+    else if (Computermove === 'Paper'){
+        result = 'Tie Game';
+    }
+    else if (Computermove=== 'Scissors')
+    {
+        result ='You lose';
+    }
+alert(`You Picked Paper, Computer picked ${Computermove}. humm ${result}`)
+    
+    "
+    
+    
+    >Paper</button>
+    <button
+    
+    onclick="
+    
+    
+    
+        const randomnumber = Math.random( );
+    let Computermove ='';
+    
+    if (randomnumber >= 0 && randomnumber < 0.3){
+        Computermove = 'rock';
+    }
+    else if (randomnumber >= 0.3 && randomnumber <  0.6){
+        Computermove = 'Paper';
+    }
+    else if (randomnumber >= 0.6 && randomnumber < 1)
+    {
+        Computermove = 'Scissors';
+    }
+    console.log(Computermove);
+
+
+    let result='';
+    if (Computermove === 'rock')
+    {
+        result ='You lose';
+    }
+
+    else if (Computermove === 'Paper'){
+        result = 'You won';
+    }
+    else if (Computermove=== 'Scissors')
+    {
+        result ='You Tie Game';
+    }
+alert(`You Picked Scissors, Computer picked ${Computermove}. humm ${result}`)
+    
+    "
+    
+    >Scissors</button>
+    <script>
+
+    </script>
+</body>
+
+</html>
