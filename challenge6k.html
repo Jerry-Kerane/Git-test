@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="05-variable.css">
+    </head>
+    
+    <body> 
+        <p>Cart Quantity</p> 
+<Button 
+onclick="
+console.log(` Cart quantity: ${Quandtity}`)
+
+"
+>Show Quantity</Button>
+<Button 
+onclick="
+      if (Quandtity + 1 > 10) {
+        alert('The cart is full');
+      } else {
+        Quandtity++;
+        console.log(`Cart quantity: ${Quandtity}`);
+      }
+    "
+
+>Add To cart</Button>
+<Button onclick="
+  if (Quandtity + 2 > 10) {
+        alert('The cart is full');
+      } else {
+        Quandtity +=2;
+        console.log(`Cart quantity: ${Quandtity}`);
+      }
+    "
+
+>+2</Button>
+<Button onclick="  if (Quandtity + 3 > 10) {
+        alert('The cart is full');
+      } else {
+        Quandtity+=3;
+        console.log(`Cart quantity: ${Quandtity}`);
+      }
+    "
+
+
+>+3</Button>
+
+<button 
+onclick="  if (Quandtity + 4 > 10) {
+        alert('The cart is full');
+      } else {
+        Quandtity +=4;
+        console.log(`Cart quantity: ${Quandtity}`);
+      }""
+>+4</button>
+<button
+onclick="  if (Quandtity + 1 > 10) {
+        alert('The cart is full');
+      } else {
+        Quandtity +=5;
+        console.log(`Cart quantity: ${Quandtity}`);
+      }""
+>+5</button>
+
+
+<Button onclick="
+
+Quandtity = 0;
+console.log('Cart was reset');
+console.log(` Cart quantity: ${Quandtity}`);
+
+">Reset cart</Button>
+<button
+onclick="  if (Quandtity - 1 < 0) {
+        alert('Not enough items in the cart');
+      } else {
+        Quandtity --;
+        console.log(`Cart quantity: ${Quandtity}`);
+      }"
+
+>Remove From cart</button>
+
+<button 
+onclick="  if (Quandtity - 2 < 0) {
+        alert('Not enough items in the cart');
+      } else {
+        Quandtity -=2;
+        console.log(`Cart quantity: ${Quandtity}`);
+      }"
+>-2</button>
+<button
+onclick="  if (Quandtity - 3 < 0) {
+        alert('Not enough items in the cart');
+      } else {
+        Quandtity -=3;
+        console.log(`Cart quantity: ${Quandtity}`);
+      }"
+>-3</button>
+        
+       <script>
+let Quandtity = 0;
+
+
+       </script>
+    </body>
+</html>
+<!--BIEN MEs IMPRESSION APRES AVOIR SUVIS CELA 
+Deja note toujours que le javascript est case sensitive so you can't really play with your code or you may get stuck at a point
+seconde most of the code is done in the script firts and then inline using (onclick)
+always work with interpollation 
+-->
+
+
