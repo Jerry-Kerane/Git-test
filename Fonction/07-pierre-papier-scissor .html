@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>Rock paper scissors</title>
+</head>
+<body>
+    <p>Rock paper scissors</p>
+    <button
+    onclick="
+
+Playgame('Rock')
+   
+    ">Rock</button>
+    <button
+    onclick="
+    
+    
+   Playgame('Paper')
+    "
+ >Paper</button>
+   
+    <button
+    
+    onclick="
+    
+    Playgame ('Scissors');
+    " 
+    
+    >Scissors</button>
+    <script>
+function Playgame(Playermove){
+        const Computermove =   pickcomputermove();
+            
+
+        let result='';
+        if (Playermove === 'Scissors')
+        {
+                if (Computermove === 'rock')
+            {
+                result ='You lose';
+            }
+
+            else if (Computermove === 'Paper'){
+                result = 'You won';
+            }
+            else if (Computermove=== 'Scissors')
+            {
+                result ='You Tie Game';
+            }
+        }
+
+       else if (Playermove === 'Paper'){
+
+
+                if (Computermove === 'rock')
+        {
+            result ='You win';
+        }
+
+        else if (Computermove === 'Paper'){
+            result = 'Tie Game';
+        }
+        else if (Computermove=== 'Scissors')
+        {
+            result ='You lose';
+        }
+   
+    
+        }
+      else if (Playermove === 'Rock'){
+                    if (Computermove === 'rock')
+            {
+                result ='Tie game';
+            }
+
+            else if (Computermove === 'Paper'){
+                result = 'You lose';
+            }
+            else if (Computermove=== 'Scissors')
+            {
+                result ='You Win';
+            } 
+
+        }
+        
+        alert(`You Picked ${Playermove}, Computer picked ${Computermove}. humm ${result}`)
+
+
+ 
+
+}
+        
+function pickcomputermove(){
+ let Computermove ='';
+
+ const randomnumber = Math.random( );
+       
+        
+        if (randomnumber >= 0 && randomnumber < 0.3){
+            Computermove = 'rock';
+        }
+        else if (randomnumber >= 0.3 && randomnumber <  0.6){
+            Computermove = 'Paper';
+        }
+        else if (randomnumber >= 0.6 && randomnumber < 1)
+        {
+            Computermove = 'Scissors';
+        }
+        console.log(Computermove);
+
+return Computermove;
+}
+    </script>
+</body>
+
+</html>
