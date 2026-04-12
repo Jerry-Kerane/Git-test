@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="05-variable.css">
+    </head>
+    
+    <body> 
+        <p>Cart Quantity</p> 
+<Button 
+onclick="
+console.log(` Cart quantity: ${Quandtity}`)
+
+"
+>Show Quantity</Button>
+<Button 
+onclick="
+updatecartquantity(+1);
+    "
+
+>Add To cart</Button>
+<Button onclick="
+  updatecartquantity(+2)
+    "
+
+>+2</Button>
+<Button onclick="  
+updatecartquantity(+3)
+    "
+
+
+>+3</Button>
+
+<button 
+onclick=" updatecartquantity(+4)"
+>+4</button>
+<button
+onclick=" 
+updatecartquantity(+5)
+"
+>+5</button>
+
+
+<Button onclick="
+
+Quandtity = 0;
+console.log('Cart was reset');
+console.log(` Cart quantity: ${Quandtity}`);
+
+">Reset cart</Button>
+<button
+onclick="  updatecartquantity(-1)
+
+>Remove From cart</button>
+
+<button 
+onclick="  
+
+updatecartquantity(-2);
+
+"
+>-2</button>
+<button
+onclick="  
+
+updatecartquantity(-3)"
+>-3</button>
+        
+       <script>
+let Quandtity = 0;
+
+function updatecartquantity (value){
+if (Quandtity + value > 10){
+  alert ('The cart is full')
+return;
+}
+else if (Quandtity + value < 0){
+alert('Not enought Items in the cart');
+return;
+}
+else {
+  Quandtity += value;
+   console.log(`Cart quantity: ${Quandtity}`);
+
+}
+}
+       </script>
+    </body>
+</html>
+<!--BIEN MEs IMPRESSION APRES AVOIR SUVIS CELA 
+Deja note toujours que le javascript est case sensitive so you can't really play with your code or you may get stuck at a point
+seconde most of the code is done in the script firts and then inline using (onclick)
+always work with interpollation 
+-->
+
+
