@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+<body>
+
+    <button 
+    onclick="
+    playgame('Piece');
+
+    
+    ">Piece</button>
+    <button
+    onclick="
+    playgame('coin')
+   
+    
+    "
+    
+
+    >coin</button>
+    <script>
+       
+         const score = JSON.parse(localStorage.getItem('score')) || {
+               win: 0,
+                loses: 0}
+       
+   function playgame(guess){
+     const randomflip = Math.random();
+        let result;
+    
+if(randomflip<0.5){
+    result='Piece'
+}else{
+    result='coin'
+};
+  
+
+if (guess === result) {
+    score.win += 1;
+    alert(`You won! win:${score.win} loses:${score.loses}`);
+} else {
+    score.loses += 1;
+    alert(`You lost! win:${score.win} loses:${score.loses}`);
+}
+/*
+if (guess=== 'Piece' )
+{
+    result='you won'
+}else if  (guess==='coin') {
+    result='You lose'
+}
+if (result==='you won'){
+    score.win +=1;
+}else if (result==='You lose'){
+    score.loses +=1;}
+     console.log(result);
+     alert(`${result} win:${score.win} loses:${score.loses}` );*/
+   
+ localStorage.setItem,('score',JSON.stringify(score));  
+    };
+    </script>
+</body>
+    </html>
