@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM input</title>
+</head>
+<body>
+    <input type="text" placeholder="Name" class="js-name" onkeydown="
+        buildINkey(event);"> 
+
+        <button onclick="
+      buildInText();
+        "
+        >Submit</button>
+
+        <p class="choice"></p>
+        <script>
+function buildINkey(event){
+    if(event.key=== 'Enter'){
+        buildInText();
+    }
+}
+
+function buildInText(){
+    const inputElement= document.querySelector('.js-name');
+
+        
+        document.querySelector('.choice').innerHTML=`Your Name is : ${inputElement.value}`;
+}
+
+
+        </script>
+</body>
+</html>
