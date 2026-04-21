@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./10d.css">
+</head>
+<body>
+
+    <button onclick="
+
+    toggle('.js-button1');
+    
+    " class="js-button1 toggle-button ">Game</button>
+   
+   <button 
+   
+   onclick="
+
+    toggle('.js-button2');
+    
+    "
+   class="js-button2 toggle-button">Music</button>
+   <button onclick="
+
+    toggle('.js-button3');
+    
+    " class="js-button3 toggle-button ">Tech</button>
+   
+   
+   
+   
+   
+   
+   <script>
+
+function toggle(selector){
+    const button= document.querySelector(selector);
+
+if (!button.classList.contains('used')){
+    button.classList.add('used')
+}else{
+    button.classList.remove('used')
+}
+
+}
+
+    </script>
+</body>
+</html>

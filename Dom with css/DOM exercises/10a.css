@@ -1,0 +1,30 @@
+.add{
+background-color: rgb(255,216,20);
+margin: 20px 20px;
+width: 200px;
+height: 40px;
+border-radius: 25px;
+font-size: 15px;
+font-weight: bold;
+border: none;
+}
+.request{
+    font-size: 15px;
+font-weight: bold;
+    width: 150px;
+    height: 45px;
+    border-radius: 8px;
+background-color: black;
+color: white;
+margin: 20px 20px;
+}
+.schedule{
+    width: 180px;
+    height: 45px;
+    border-radius: 8px;
+
+border: none;    font-size: 15px;
+font-weight: bold;
+    margin: 20px 20px;
+background-color: rgb(230,230,230);
+}
