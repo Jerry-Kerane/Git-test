@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoM</title>
+    <link rel="stylesheet" href="./dOM.CSS">
+</head>
+<body>
+
+    <p>YouTube Subscribe Button</p>
+<button onclick="
+Subscribe();
+
+
+" class="Baby">Subscribe </button>
+
+    <p class="calc">Amazone Shipping Calculator</p>
+    <p>Order ubder $40=+$10 shipping</p>
+    <p>Order over $40=FREE shpping</p>
+    
+    <input class="js-cost-input" type="text" placeholder="cost of order" onkeydown="
+   
+    handleCostkeyDown(event);
+    ">
+    <button onclick="
+    calculateTotal();
+    " 
+    class="btn2">calculate</button>
+
+    <p class="js-totale-cost"
+    onclick="
+    localStorage.getItem(cost)"
+    ></p>
+    
+    
+    
+    
+    <script>
+        JSON.parse(localStorage.getItem(cost));
+        function handleCostkeyDown(event){
+ 
+   if (event.key === 'Enter'){
+    calculateTotal();
+   }
+        }
+
+
+
+
+
+function calculateTotal(){
+const inputElement= document.querySelector('.js-cost-input');
+let cost=Number(inputElement.value);/* using the number fucntion we convert string into a number and using string we do the reverse*/
+
+if(cost < 40){
+    cost = cost + 10;
+    
+}
+
+
+document.querySelector('.js-totale-cost').innerHTML=`$${cost}`;
+
+localStorage.setItem('cost',JSON.stringify(cost));
+}
+document.querySelector('.js-totale-cost').innerHTML=`$${cost}`;
+
+
+function Subscribe(){
+        const buttonElement=document.querySelector('.Baby');
+    if (buttonElement.innerText==='Subscribe'){
+        buttonElement.innerText='Subscribed';
+        buttonElement.classList.add('is-used');
+    }else{
+        buttonElement.innerHTML='Subscribe';
+        buttonElement.classList.remove('is-used');
+    }
+
+}
+
+
+
+
+
+  /*  document.title='Changed'
+    console.log(document.body)
+    console.log(typeof document.body)
+    console.log(document.body.innerHTML );
+    /*Controls all the html*/
+    /*
+document.body.innerHTML='<button>GOOD JOB</button>';*/  
+ /*Method= function save in an object*/
+
+
+
+    /*
+document.body.innerHTML='Boom';
+document.title='Good Jobs!'*/    </script>
+</body> 
+</html>
