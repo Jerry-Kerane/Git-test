@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <Button  class="Button">start</Button> 
+
+
+
+<button onclick=" updatecart();" class="">Add to Cart</button>
+<p class="add-cart"></p>
+<script>
+
+
+ setTimeout (()=>{
+    document.querySelector('.Button').addEventListener('click',()=>{
+        const button1=document.querySelector('.Button')
+button1.innerHTML='Loading....'
+ })
+    })
+    
+    
+
+ setInterval(()=>{
+    
+    document.querySelector('.Button').addEventListener('click',()=>{
+        const button2=document.querySelector('.Button')
+button2.innerHTML='Finished!.'
+ })
+    
+    
+ },1000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function updatecart(){
+const button= document.querySelector('.add-cart');
+button.innerHTML='Added';
+setInterval(function(){
+    button.innerHTML=''
+},3000)}
+
+
+
+
+
+
+
+
+
+
+    let add= ()=>{
+        console.log(2+3)
+    }
+    add();
+    add();
+     const runTwice=(fun)=>{
+fun();
+fun();
+    }
+    runTwice(()=>{
+        console.log('12b')
+
+    })
+
+    runTwice(add);
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

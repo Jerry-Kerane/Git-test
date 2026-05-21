@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="Title">App</title>
+</head>
+<body>
+    <button onclick="
+    updateTimeline();
+    Displaynotifications();
+    messages +=1;
+    ">Add</button>
+    <button onclick="
+    updateTimeline();
+    if(messages>0){
+messages --;
+if(messages===0){
+    stopNotification();
+}
+    }
+    
+    ">Remove</button>
+    
+    <script>
+     let intervalid;
+     let isDisplaynotifications;
+
+     function Displaynotifications(){
+        if(isDisplaynotifications){
+            return;
+        }
+     }
+     isDisplaynotifications=true;
+                
+            let messages=2;
+                function updateTimeline(){
+        
+        if(document.title ==='App'){
+            intervalid=setInterval(function(){
+        document.title=`(${messages})New Messages'`
+                },1000)
+        } else{
+            document.title='App'        }
+            console.log(messages)
+                }
+
+                function stopNotification(){
+                    isDisplaynotifications=false;
+                    clearInterval(intervalid);
+                    document.title='App'
+                }
+
+
+
+  
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    const multiply=(a,b)=>{
+return a*b;
+    }
+console.log(multiply(2,3));
+console.log(multiply(7,10));
+
+let array=0;
+const countPositive=[-2,3,-5,7,10];
+countPositive.forEach(nums => {
+    if(nums>0){
+        array++;
+    }
+});
+
+console.log(array);
+
+/*12m*/
+console.log([1,2,3].map((array,num)=>{
+    return array+2;
+}));
+
+console.log([-2,-1,0,99].map((array,num)=>{
+    return array+2;
+}))
+
+
+/*12n*/
+let eggCount=0;
+console.log(['egg','apple','egg','egg','ham'].filter((food)=>{
+    if(food==='egg' && eggCount<2){
+        eggCount++;
+return false;
+
+    }else {return true}
+}
+))
+</script>
+
+
+</body>
+</html>
